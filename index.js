@@ -106,7 +106,6 @@ showBtn.addEventListener("click", () => {
   PokedexData.forEach((aPokemon) => {
     let pokemonImag = document.createElement('img');
     let aPokemonList = document.createElement("li");
-    let pokemonImg = document.createElement("img");
 
     aPokemonList.innerText = `
       name: ${aPokemon.name},
@@ -160,7 +159,7 @@ let pokemonUrl = document.querySelector('#url');
 registBtn.addEventListener('click', () => {
     PokedexData.push({
         name: `${pokemonName.value}`,
-        height: NumberpokemonHeight.value,
+        height: Number(pokemonHeight.value),
         weight: +pokemonWeight.value,
         type: `${pokemonType.value}`,
         url: `${pokemonUrl.value}`,
