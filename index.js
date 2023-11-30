@@ -115,7 +115,7 @@ showBtn.addEventListener("click", () => {
       type: ${aPokemon.type},
     `;
     showPokemon.append(aPokemonList);
-    showPokemon.append(pokemonImg);
+    aPokemonList.append(pokemonImg);
   });
 });
 
@@ -141,10 +141,10 @@ filterBtn.addEventListener("click", () => {
       name: ${aPokemon.name},
       height: ${aPokemon.height},
       weight: ${aPokemon.weight},
-      type: ${aPokemon.type},
-    `;
+      type: ${aPokemon.type}`
+    ;
     showPokemon.append(aPokemonList);
-    showPokemon.append(pokemonImg);
+    aPokemonList.append(pokemonImg);
   });
 });
 
