@@ -112,8 +112,8 @@ showBtn.addEventListener("click", () => {
       name: ${aPokemon.name},
       height: ${aPokemon.name},
       weight: ${aPokemon.weight},
-      type: ${aPokemon.type},
-    `;
+      type: ${aPokemon.type}`;
+      
     showPokemon.append(aPokemonList);
     aPokemonList.append(pokemonImg);
   });
