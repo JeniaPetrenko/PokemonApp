@@ -106,22 +106,25 @@ showBtn.addEventListener("click", () => {
   PokedexData.forEach((aPokemon) => {
     let pokemonImag = document.createElement('img');
     let aPokemonList = document.createElement("li");
+    let pokemonImg = document.createElement("img");
+
     aPokemonList.innerText = `
       name: ${aPokemon.name},
       height: ${aPokemon.name},
       weight: ${aPokemon.weight},
       type: ${aPokemon.type},
-      url: ${aPokemon.url}
     `;
     pokemonImag.src = aPokemon.url 
     showPokemon.append(aPokemonList)
     aPokemonList.append(pokemonImag);
+
   });
 });
 
 let filterBtn = document.querySelector("#filterBtn");
 filterBtn.addEventListener("click", () => {
   showPokemon.innerHTML = "";
+
   let checkedType = document.querySelectorAll("[name='pokemonType']:checked");
   let selectedType = [];
   checkedType.forEach((type) => {
@@ -133,14 +136,17 @@ filterBtn.addEventListener("click", () => {
   });
   filterPokemon.forEach((aPokemon) => {
     let aPokemonList = document.createElement("li");
+    let pokemonImg = document.createElement("img");
+    pokemonImg.setAttribute(`src`, aPokemon.url);
+
     aPokemonList.innerText = `
       name: ${aPokemon.name},
-      height: ${aPokemon.name},
+      height: ${aPokemon.height},
       weight: ${aPokemon.weight},
-      type: ${aPokemon.type},
-      url: ${aPokemon.url}
-    `;
+      type: ${aPokemon.type}`
+    ;
     showPokemon.append(aPokemonList);
+    aPokemonList.append(pokemonImg);
   });
 });
 
