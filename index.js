@@ -111,12 +111,11 @@ showBtn.addEventListener("click", () => {
       name: ${aPokemon.name},
       height: ${aPokemon.name},
       weight: ${aPokemon.weight},
-      type: ${aPokemon.type},
+      type: ${aPokemon.type}
     `;
     pokemonImag.src = aPokemon.url 
     showPokemon.append(aPokemonList)
     aPokemonList.append(pokemonImag);
-
   });
 });
 
