@@ -104,9 +104,9 @@ let showBtn = document.querySelector("#showBtn");
 
 showBtn.addEventListener("click", () => {
   PokedexData.forEach((aPokemon) => {
+    let pokemonImag = document.createElement('img');
     let aPokemonList = document.createElement("li");
     let pokemonImg = document.createElement("img");
-    pokemonImg.setAttribute(`src`, aPokemon.url);
 
     aPokemonList.innerText = `
       name: ${aPokemon.name},
@@ -114,8 +114,10 @@ showBtn.addEventListener("click", () => {
       weight: ${aPokemon.weight},
       type: ${aPokemon.type},
     `;
-    showPokemon.append(aPokemonList);
-    aPokemonList.append(pokemonImg);
+    pokemonImag.src = aPokemon.url 
+    showPokemon.append(aPokemonList)
+    aPokemonList.append(pokemonImag);
+
   });
 });
 
@@ -158,10 +160,11 @@ let pokemonUrl = document.querySelector('#url');
 registBtn.addEventListener('click', () => {
     PokedexData.push({
         name: `${pokemonName.value}`,
-        height: Number(pokemonHeight.value),
+        height: NumberpokemonHeight.value,
         weight: +pokemonWeight.value,
         type: `${pokemonType.value}`,
         url: `${pokemonUrl.value}`,
     })
+console.log(PokedexData);
 })
     
