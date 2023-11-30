@@ -113,3 +113,20 @@ const PokedexData = [
     }
   ];
   
+
+let showPokemon = document.querySelector("#showPokemon");
+let showBtn = document.querySelector("#showBtn");
+
+showBtn.addEventListener("click", ()=>{
+  PokedexData.forEach((aPokemon)=>{
+    let aPokemonList = document.createElement("li");
+    aPokemonList.innerText = `
+      name: ${aPokemon.name},
+      height: ${aPokemon.name},
+      weight: ${aPokemon.weight},
+      type: ${aPokemon.type},
+      url: ${aPokemon.url}
+    `
+    showPokemon.append(aPokemonList)
+  })
+})
