@@ -140,3 +140,21 @@ filterBtn.addEventListener("click", () => {
     showPokemon.append(aPokemonList);
   });
 });
+
+let registBtn = document.querySelector('#registBtn');
+let pokemonName = document.querySelector('#name');
+let pokemonHeight = document.querySelector('#height');
+let pokemonWeight = document.querySelector('#weight');
+let pokemonType = document.querySelector('#type');
+let pokemonUrl = document.querySelector('#url');
+
+registBtn.addEventListener('click', () => {
+    PokedexData.push({
+        name: `${pokemonName.value}`,
+        height: Number(pokemonHeight.value),
+        weight: +pokemonWeight.value,
+        type: `${pokemonType.value}`,
+        url: `${pokemonUrl.value}`,
+    })
+})
+    
